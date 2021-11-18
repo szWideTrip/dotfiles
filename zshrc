@@ -17,8 +17,17 @@ source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
 # Load rbenv if installed (to manage your Ruby versions)
-export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
-type -a rbenv > /dev/null && eval "$(rbenv init -)"
+# export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
+# type -a rbenv > /dev/null && eval "$(rbenv init -)"
+
+# Setting PATH for Python 3 installed by brew
+export PATH=/usr/local/share/python:$PATH
+
+# Configuration for virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
