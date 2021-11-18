@@ -49,3 +49,6 @@
 
 [pull]
   rebase = false
+[user]
+	email = sami.ziani@wide-trip.com
+	name = sami
